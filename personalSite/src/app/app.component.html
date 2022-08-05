@@ -1,2 +1,156 @@
+<html>
+	<header>
+		<div class="top-container">
+			<div class="profile">
+				<img src="assets/images/profile.jpg">
+			</div>
+			<h1>Hi, I'm Reece Riherd!</h1>
+		</div>
+	</header>
+	<div class="header" id="myHeader"
+		[ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+			<a (click)="info = 1">About Me</a>
+			<a (click)="info = 2">Work Experience</a>
+			<a (click)="info = 3">Projects and Volunteering</a>
+		</div>
+	<div class ="content">
+		<ng-container *ngIf="info == 1">
+			<h2 id="AboutMe">About Me</h2>
+			<hr class="line">
+			<img src="assets/images/eiffel.jpg" class="support">
+			<p>    
+				Hi! I am currently a third year student in Computer Engineering at the University of Texas at Austin
+				with a double major in Arts and Entertainment Technologies and a certificate in Scientific Computations and Data Sciences, 
+				and I am pursuing a technical core 
+				in Software Engineering. My coursework thus far has consisted of a bottom-up foundation, where I started by
+				learning the microarchitecture of a computer and how gates and digital logic relate to code. From there, I 
+				gained experience with Assembly Language (namely x86 ARM) through Introduction to Embedded Systems while
+				also gaining experience in C and data structures in Software Design and Implementation I. This past year,
+				I have ventured further into software engineering within Software Design and Implementation II, where I
+				explored more topics relating to data structures and complexity, this time while developing my skills 
+				in Java. Most recently, I have become much more efficient and cognizant of my code in my algorithms class, and, this upcoming semester,
+				I plan to take Operating Systems to learn of process management and file systems.
+			</p>
+			<p>
+				In my past education, I attended Heritage High School in Frisco, Texas, where I enrolled AP courses
+				preparing for my college education, eventually earning a title as a National AP scholar. Simultaneously,
+				I also took the Harvardx course CS50x, where I was taught the basics of coding from a variety of perspectives,
+				learning topics such as data analysis, game developement, and data structures in the languages of 
+				C, Python, SQL, and Lua.
+			</p>
+			<p>
+				Among my interests, I am involved in music, baseball, weight lifting, and running. I played bass for my school 
+				orchestra in high school, where I participated in Solo&Ensemble and was a member of the regional orchestra.
+				After high school, I have stayed involved by continuing my practice within both electric and standup bass, 
+				in addition to playing and developing my skills in guitar. As for running, I participated in the cross-country
+				team in high school, and I ran the Dallas Half-Marathon in December of 2018. I am proud to be a member of each
+				of these communities, and look forward to maintaining my interests!
+			</p>
+		</ng-container>
+		<ng-container *ngIf="info == 2">
+			<h2 id="Projects">Work Experience</h2>
+			<hr class="line">
+			<h3>AT&T TDP Software Engineering Internship</h3>
+			<hr class="subline">
+			<img src="assets/images/AT&Tintropic.png" class="support">
+			<p>
+				This past summer I completed my first software engineering internship with AT&T in their Technology Development Program, where I acted as a software engineer!
+				This internship consisted of two major initiatives for my fellow interns: the intern innovation challenge and a project to be completed alongside a business partner.
+			</p>
+			<p>
+				Within the intern innovation challenge, I was tasked with working alongside a small group of interns to develop and employ a unique product to leverage the core 
+				values of AT&T while targeting their company verticals. This experience helped me to get comfortable working within a large company more than anything; the need to
+				constantly collaborate with other groups within AT&T and network beyond my own department was necessary for this and working efficiently in a team made this project 
+				move at a sufficient pace. However, I was also able to develop my technical skills, learning how to start a project from the bottom up, in addition to being introduced
+				to full-stack development through an Angular framework with HTML, CSS, and TypeScript.
+			</p>
+			<p>
+				Meanwhile, I was also able to work alongside AT&T Labs to explore efficient search algorithms implemented into a web app. My role in this project consisted mostly of backend
+				development, creating flask routes and optimizing existing code in Python to create an enjoyable user experience. This experience was invaluable in terms of introducing me to a larger 
+				scale project with a visible impact on the AT&T community. Although my role was primarly backend, I also got to explore the implementation of a Vue app, in addition to an ElasticSearch
+				database.
+			</p>
+			<p>
+				Alongside all of this, I got to meet and work alongside some great interns, making great friends and contributing to the community all the while! I especially enjoyed my experiences participating
+				in our Intern Community Day, the numerous tours around the AT&T headquarters campus, and going on excursions to get to know the city that I grew up in even better!
+			</p>
+			<h3>Texas Rocket Engineering Lab</h3>
+			<hr class="subline">
+			<p>
+				Coming on my second full year in TREL, I've come to love the community and the work that the organization represents. Working on a rocket is one of the most interesting projects
+				that I have ever been a part of, and also one that has incorporated and pushed the limits of my academic skills. Within the Weather Balloon Test Team of the rocket,
+				I have gotten to utilize embedded systems, data collection and analysis, and Python in a practical setting, while also working with an organization with hundreds of members.
+			</p>
+			<p>
+				In the same regard, I have developed my leadership skills in acting as the Weather Balloon Test Team Lead, working alongside the admin team and other companies and organizations, 
+				ranging from small startups like Procurify to larger aerospace organizations like Blue Origin and Firefly, all while being a part of the first collegiate team on track to send a rocket to 
+				the Karman Line! Overall, I am happy to call the organization a home and excited to spend the next two years here!
+			</p>
+			<p>
+				See our page <b><a href="https://www.texasrocketlab.com/" style="color: black; text-decoration: none;">here</a></b>!
+			</p>
+			<h3>UT Austin Undergraduate Research Assistant</h3>
+			<hr class="subline">
+			<p>
+				I have also been a part of a lab under Professor Jiabao Li focusing on the visualization of the MAG dataset! This project has given me a much larger depth of understanding into 
+				topics in compuer science that I would otherwise be unacquainted. Specifically, the lab has introduced me to neural networks, visualization libraries within Python, and Docker containers.
+				Alongside this, the lab has pushed my creativity in finding solutions and potential applications of code by creating an open environment for improvement and change of the project! Although 
+				the end goal of presenting a paper for IEEE VIS is still a ways away, it is exciting to see all of the progress that we have made so far!
+			</p>
+			<h3 id="TAMUC">Texas A&M - Commerce REU</h3>
+			<hr class="subline">
+			<img src="assets/images/A&MCommerce.JPG" class="support">
+			<p>
+				During the summer of 2021, I worked alongside the professors at Texas A&M University - Commerce within the university's 
+				Research Experience for Undergraduates - Physics and Astronomy. This program offered a myriad of opportunities in developing 
+				my knowledge of numerous fields of study within astronomy and physics such as the development of organic solar panels, 
+				asteroid mapping, and the life-cycle of a star.
+			</p>
+			<p>
+				For my research, I worked alongside Dr. Bahar Modir to analyze 
+				a college physics class aimed at aspiring high school physics teachers in the effectiveness of teaching strategies and content 
+				for these students. This analysis was assisted by an online discussion board which eased the collection of data for this online class 
+				and allowed for quantitative analysis for these topics using the NetworkX Python library. From this analysis, I was able to conclude that 
+				the difficulty level, availability of socialization, presence of central members, and varying participation among members was necessary to 
+				facilitate the Community of Practice within a classroom. I was also able to later present these results and process of data collection virtually
+				alongside a poster at an American Physics Society meeting in Houston. 
+			</p>
+			<div class="external">
+				<p>
+					See the abstract <b><a href="https://meetings.aps.org/Meeting/TSF21/Session/Q01.24" style="color: black; text-decoration: none;">here</a></b>!
+				</p>
+			</div>
+		</ng-container>
+		<ng-container *ngIf="info == 3">
+			<h2 id="Projects">Projects and Volunteering</h2>
+			<hr class="line">
+			<h3>Code2College Volunteer Instructor</h3>
+			<hr class="subline">
+			<p>
+				Based out of Austin, Code2College aids in giving educational STEM opportunities to high school students through volunteer-based instructional lectures. By supplying all the proper materials
+				to educate these students, Code2College creates an easy path for professional workers to give back to the community! I am so glad to have had this opportunity as well, in teaching underrepresented 
+				students about material relevant to that which I am passionate about. Specifically, in my time with Code2College, I have taught introductory principles of Python (like data types, code structure, 
+				and video game development), Git and code collaboration, and project management, namely the Agile and Scrum methodolgies. Although my lessons were instructed over Zoom, I am glad to have met the students
+				 that I taught and seen the impact that I can make in the educational system of America.
+			</p>
+			<h3 id="DinoJoust">DinoJoust</h3>
+			<hr class="subline">
+			<img src="assets/images/DinoJoust.jpg" id="DinoJoust">
+			<p>
+				For a personal project, I decided to create a rendition of the arcade classic, <em>Joust</em>, in which two players try to defeat the other by 
+				either pushing them into lave or jumping on top of them. I created this game in the summer of 2020 using Lua, a language similar to Python except it acts as a scripting 
+				language that is exceptionally useful for game development. In the creation of the game, I was able to use a 2D platformer map of squares, and multiplayer input 
+				from various buttons on one keyboard - making the game easy for web distribution. Likewise, I implemented a party-style battle royale capability for this program through 
+				support for up to four players.
+			</p>
+			<div class="external">
+				<p>
+					See this on <a href="https://www.youtube.com/watch?v=-xUFdhBTauQ" style="color: black; text-decoration: none;"><b>YouTube</b></a> and <a href="https://github.com/rreece15/DinoJoust" style="color: black; text-decoration: none;"><b>GitHub</b></a>!
+				</p>
+			</div>
+		</ng-container>
+	</div>
+</html>
+
 
 <router-outlet></router-outlet>

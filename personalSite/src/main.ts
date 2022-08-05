@@ -10,3 +10,20 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+if (header != null){
+  var sticky = header.offsetTop;
+}
+function myFunction() {
+    if (header != null){
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      }
+      else {
+          header.classList.remove("sticky");
+      }
+    }
+}
